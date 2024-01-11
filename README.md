@@ -39,4 +39,4 @@ As you can see, the FastCGI works correctly, but Classic CGI looses the form dat
 
 # Help needed!
 
-Please submit a pull request or email me at wolfsoft@mail.ru if you can fix this issue.
+Please submit a pull request or email me at d.prochko@botguard.net if you can fix this issue. A suitable solution will be paid for.
