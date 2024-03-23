@@ -29,8 +29,13 @@ static apr_status_t input_filter(ap_filter_t *f, apr_bucket_brigade *bb, ap_inpu
 
 // main handler
 static int handler(request_rec* r) {
-	// skip processing subrequests
-	if ((r->main != NULL) || (r->prev != NULL)) {
+
+	//we don't want to skip processing subrequests
+	//if ((r->main != NULL) || (r->prev != NULL)) {
+	//	return DECLINED;
+	//}
+	// make sure it is fcgi or cgi handler (not the php one)
+	if (ap_strstr_c(r->handler, "cgi") == NULL) {
 		return DECLINED;
 	}
 
